@@ -1,0 +1,328 @@
+
+
+
+DROP TABLE tb_bebida CASCADE CONSTRAINTS;
+
+DROP TABLE tb_cliente CASCADE CONSTRAINTS;
+
+DROP TABLE tb_ingrediente CASCADE CONSTRAINTS;
+
+DROP TABLE tb_pedido CASCADE CONSTRAINTS;
+
+DROP TABLE tb_pedido_bebida CASCADE CONSTRAINTS;
+
+DROP TABLE tb_pedido_pizza CASCADE CONSTRAINTS;
+
+DROP TABLE tb_pizza CASCADE CONSTRAINTS;
+
+DROP TABLE tb_pizza_composicao CASCADE CONSTRAINTS;
+
+-- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+
+-- predefined type, no DDL - XMLTYPE
+
+CREATE TABLE tb_bebida (
+    id_bebida    INTEGER NOT NULL,
+    nome_bebida  VARCHAR2(100),
+    preco_bebida NUMBER(10, 2)
+);
+
+ALTER TABLE tb_bebida ADD CONSTRAINT tb_bebida_id_bebida_pk PRIMARY KEY ( id_bebida );
+
+CREATE TABLE tb_cliente (
+    id_cliente       INTEGER NOT NULL,
+    nome_cliente     VARCHAR2(100),
+    cpf_cliente      INTEGER,
+    telefone_cliente VARCHAR2(10),
+    endereco_cliente VARCHAR2(100)
+);
+
+ALTER TABLE tb_cliente ADD CONSTRAINT tb_cliente_id_cliente_pk PRIMARY KEY ( id_cliente );
+
+CREATE TABLE tb_ingrediente (
+    id_ingrediente   INTEGER NOT NULL,
+    nome_ingrediente VARCHAR2(100)
+);
+
+--  ERROR: PK name length exceeds maximum allowed length(30) 
+ALTER TABLE tb_ingrediente ADD CONSTRAINT tb_ingrediente_id_ingrediente_pk PRIMARY KEY ( id_ingrediente );
+
+CREATE TABLE tb_pedido (
+    id_pedido        INTEGER NOT NULL,
+    id_cliente       INTEGER NOT NULL,
+    data_hora_pedido TIMESTAMP
+);
+
+ALTER TABLE tb_pedido ADD CONSTRAINT tb_pedido_id_pedido_pk PRIMARY KEY ( id_pedido );
+
+CREATE TABLE tb_pedido_bebida (
+    id_pedido         INTEGER NOT NULL,
+    id_bebida         INTEGER NOT NULL,
+    quantidade_bebida INTEGER
+);
+
+CREATE TABLE tb_pedido_pizza (
+    id_pedido        INTEGER NOT NULL,
+    id_pizza         INTEGER NOT NULL,
+    quantidade_pizza INTEGER
+);
+
+CREATE TABLE tb_pizza (
+    id_pizza    INTEGER NOT NULL,
+    nome_pizza  VARCHAR2(100),
+    preco_pizza NUMBER(10, 2)
+);
+
+ALTER TABLE tb_pizza ADD CONSTRAINT tb_pizza_id_pizza_pk PRIMARY KEY ( id_pizza );
+
+CREATE TABLE tb_pizza_composicao (
+    id_pizza       INTEGER NOT NULL,
+    id_ingrediente INTEGER NOT NULL
+);
+
+ALTER TABLE tb_pedido_bebida
+    ADD CONSTRAINT tb_pedido_bebida_id_bebida_fk FOREIGN KEY ( id_bebida )
+        REFERENCES tb_bebida ( id_bebida );
+
+ALTER TABLE tb_pedido_bebida
+    ADD CONSTRAINT tb_pedido_bebida_id_pedido_fk FOREIGN KEY ( id_pedido )
+        REFERENCES tb_pedido ( id_pedido );
+
+ALTER TABLE tb_pedido
+    ADD CONSTRAINT tb_pedido_id_cliente_fk FOREIGN KEY ( id_cliente )
+        REFERENCES tb_cliente ( id_cliente );
+
+ALTER TABLE tb_pedido_pizza
+    ADD CONSTRAINT tb_pedido_id_pizza_fk FOREIGN KEY ( id_pizza )
+        REFERENCES tb_pizza ( id_pizza );
+
+ALTER TABLE tb_pedido_pizza
+    ADD CONSTRAINT tb_pedido_pizza_id_pedido_fk FOREIGN KEY ( id_pedido )
+        REFERENCES tb_pedido ( id_pedido );
+
+--  ERROR: FK name length exceeds maximum allowed length(30) 
+ALTER TABLE tb_pizza_composicao
+    ADD CONSTRAINT tb_pizza_composicao_id_ingrediente_fk FOREIGN KEY ( id_ingrediente )
+        REFERENCES tb_ingrediente ( id_ingrediente );
+
+--  ERROR: FK name length exceeds maximum allowed length(30) 
+ALTER TABLE tb_pizza_composicao
+    ADD CONSTRAINT tb_pizza_composicao_id_pizza_fk FOREIGN KEY ( id_pizza )
+        REFERENCES tb_pizza ( id_pizza );
+
+
+
+        
+        
+
+INSERT INTO tb_cliente(id_cliente,nome_cliente,cpf_cliente,telefone_cliente,endereco_cliente) VALUES(10,'TONY STARK',12345678910,'999999910','Rua 10');
+INSERT INTO tb_cliente(id_cliente,nome_cliente,cpf_cliente,telefone_cliente,endereco_cliente) VALUES(20,'HULK',12345678920,'999999920','Rua 20');
+INSERT INTO tb_cliente(id_cliente,nome_cliente,cpf_cliente,telefone_cliente,endereco_cliente) VALUES(30,'THOR',12345678930,'999999930','Rua 30');
+INSERT INTO tb_cliente(id_cliente,nome_cliente,cpf_cliente,telefone_cliente,endereco_cliente) VALUES(40,'CAPITAO AMERICA',12345678940,'999999940','Rua 40');
+INSERT INTO tb_cliente(id_cliente,nome_cliente,cpf_cliente,telefone_cliente,endereco_cliente) VALUES(50,'VIUVA NEGRA',12345678950,'999999950','Rua 50');
+
+INSERT INTO tb_pizza(id_pizza,nome_pizza,preco_pizza) VALUES(1,'mussarela',50.00);
+INSERT INTO tb_pizza(id_pizza,nome_pizza,preco_pizza) VALUES(2,'calabresa',60.00);
+INSERT INTO tb_pizza(id_pizza,nome_pizza,preco_pizza) VALUES(3,'portuguesa',60.50);
+INSERT INTO tb_pizza(id_pizza,nome_pizza,preco_pizza) VALUES(4,'palmito',70.00);
+INSERT INTO tb_pizza(id_pizza,nome_pizza,preco_pizza) VALUES(5,'chocolate',80.25);
+
+INSERT INTO tb_bebida(id_bebida,nome_bebida,preco_bebida) VALUES(1,'coca-cola 210ml',5.00);
+INSERT INTO tb_bebida(id_bebida,nome_bebida,preco_bebida) VALUES(2,'cerveja original 1l',20.50);
+INSERT INTO tb_bebida(id_bebida,nome_bebida,preco_bebida) VALUES(3,'guarana dolly 600ml',6.50);
+INSERT INTO tb_bebida(id_bebida,nome_bebida,preco_bebida) VALUES(4,'red bull 200ml',12.00);
+INSERT INTO tb_bebida(id_bebida,nome_bebida,preco_bebida) VALUES(5,'fanta uva 350mml',7.25);
+
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(1,'molho de tomate');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(2,'queijo mussarela');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(3,'linguica calabresa');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(4,'ovo');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(5,'azeitona');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(6,'cebola');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(7,'palmito');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(8,'presunto');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(9,'ganache de chocolate');
+INSERT INTO tb_ingrediente(id_ingrediente,nome_ingrediente) VALUES(10,'granulado de chocolate');
+
+
+
+--mussarela
+INSERT INTO tb_pizza_composicao VALUES(1,1);
+INSERT INTO tb_pizza_composicao VALUES(1,2);
+INSERT INTO tb_pizza_composicao VALUES(1,5);
+
+--calabresa
+INSERT INTO tb_pizza_composicao VALUES(2,1);
+INSERT INTO tb_pizza_composicao VALUES(2,3);
+INSERT INTO tb_pizza_composicao VALUES(2,5);
+INSERT INTO tb_pizza_composicao VALUES(2,6);
+
+--portuguesa
+INSERT INTO tb_pizza_composicao VALUES(3,1);
+INSERT INTO tb_pizza_composicao VALUES(3,2);
+INSERT INTO tb_pizza_composicao VALUES(3,4);
+INSERT INTO tb_pizza_composicao VALUES(3,5);
+INSERT INTO tb_pizza_composicao VALUES(3,6);
+INSERT INTO tb_pizza_composicao VALUES(3,8);
+
+--palmito
+INSERT INTO tb_pizza_composicao VALUES(4,1);
+INSERT INTO tb_pizza_composicao VALUES(4,2);
+INSERT INTO tb_pizza_composicao VALUES(4,7);
+INSERT INTO tb_pizza_composicao VALUES(4,5);
+
+--chocolate
+INSERT INTO tb_pizza_composicao VALUES(5,9);
+INSERT INTO tb_pizza_composicao VALUES(5,10);
+
+
+--Pedido TONY STARK
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(1,10,'01-SEP-23 11.07.18.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(1,4,2);
+INSERT INTO tb_pedido_pizza VALUES(1,2,1);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(1,4,7);
+
+--Pedido TONY STARK
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(6,10,'03-SEP-23 11.07.18.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(6,4,1);
+INSERT INTO tb_pedido_pizza VALUES(6,2,2);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(6,4,2);
+
+
+--Pedido TONY STARK
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(7,10,'01-AUG-23 10.05.10.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(7,2,2);
+INSERT INTO tb_pedido_pizza VALUES(7,3,2);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(7,4,5);
+
+--Pedido TONY STARK
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(8,10,'03-AUG-23 08.00.25.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(8,3,2);
+INSERT INTO tb_pedido_pizza VALUES(8,4,3);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(8,4,5);
+
+
+--Pedido HULK
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(2,20,'01-SEP-23 10.00.00.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(2,3,40);
+INSERT INTO tb_pedido_pizza VALUES(2,2,35);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(2,3,10);
+
+
+--Pedido THOR
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(3,30,'01-SEP-23 10.00.00.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(3,1,1);
+INSERT INTO tb_pedido_pizza VALUES(3,2,1);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(3,2,25);
+INSERT INTO tb_pedido_bebida VALUES(3,1,1);
+
+
+--Pedido CAPITAO AMERICA
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(4,40,'02-SEP-23 11.55.00.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(4,1,2);
+INSERT INTO tb_pedido_pizza VALUES(4,4,2);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(4,5,1);
+
+
+--Pedido NATASHA
+--id_pedido,id_cliente,data_hora
+INSERT INTO tb_pedido(id_pedido,id_cliente,data_hora_pedido) VALUES(5,50,'02-SEP-23 7.30.00.000 PM');
+--id_pedido,id_pizza,qtde
+INSERT INTO tb_pedido_pizza VALUES(5,5,1);
+--id_pedido,id_bebida,qtde
+INSERT INTO tb_pedido_bebida VALUES(5,1,1);
+
+
+INSERT INTO tb_cliente values(60,'CHAVES',123,123,'Rua 8');
+INSERT INTO tb_cliente values(71,'CLOTILDE',321,321,'Rua 71');
+
+INSERT INTO tb_pizza(id_pizza,nome_pizza,preco_pizza) VALUES(100,'4 queijos',100.00);
+INSERT INTO tb_pizza(id_pizza,nome_pizza,preco_pizza) VALUES(101,'banana',90.00);
+
+ALTER TABLE tb_pizza
+ADD categoria VARCHAR(30);
+
+UPDATE tb_pizza
+set categoria = 'SALGADO'
+WHERE nome_pizza NOT IN ('chocolate','banana');
+
+UPDATE tb_pizza
+set categoria = 'DOCE'
+WHERE nome_pizza IN ('chocolate','banana');
+
+
+COMMIT;
+
+
+
+
+
+
+REVISÃO
+
+EXERCICIOS
+
+1. Relatório de Pizzas compradas em Setembro
+SELECT c.nome_cliente, pz.nome_pizza, p.data_hora_pedido
+FROM TB_CLIENTE c INNER JOIN TB_PEDIDO p
+ON c.id_cliente = p.id_cliente
+INNER JOIN TB_PEDIDO_PIZZA pp
+ON pp.id_pedido = p.id_pedido
+INNER JOIN TB_PIZZA pz
+ON pz.id_pizza = pp.id_pizza
+WHERE DATA_HORA_PEDIDO >= '01-SEP-23 12.00.00 AM'
+AND DATA_HORA_PEDIDO <= '30-SEP-23 11.59.59 PM';
+
+2. Relatorio de Clientes que nunca fizeram pedido
+SELECT *
+FROM TB_CLIENTE c LEFT JOIN TB_PEDIDO p
+ON c.id_cliente = p.id_cliente
+WHERE p.id_cliente IS NULL;
+
+3. O Maior Valor de uma Pizza
+SELECT MAX(preco_pizza)
+FROM TB_PIZZA;
+
+4. Pizza mais cara e o seu preço
+SELECT nome_pizza, preco_pizza
+FROM TB_PIZZA
+ORDER BY preco_pizza DESC
+FETCH FIRST 1 ROWS ONLY;
+
+5. Três Pizzas mais baratas
+SELECT nome_pizza, preco_pizza
+FROM TB_PIZZA
+ORDER BY preco_pizza ASC
+FETCH FIRST 3 ROWS ONLY;
+
+6. Pizza mais cara e o seu preço por CATEGORIA
+SELECT categoria, MAX(preco_pizza)
+FROM TB_PIZZA
+GROUP BY categoria;
+
+
+
+SELECT 'DROP TABLE '||TABLE_NAME||' CASCADE CONSTRAINTS;'
+FROM ALL_TABLES
+WHERE OWNER = 'PF1666';
