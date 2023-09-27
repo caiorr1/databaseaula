@@ -1,0 +1,134 @@
+# Negócios Digitais
+
+Negócios digitais são aqueles que fazem uso da tecnologia e da internet para desenvolver e comercializar padrões mais modernos de produtos e serviços.
+
+**Características**
+Atualização permanente
+Novos modelos de negócios
+Marketing contínuo
+Competitividade
+Conectividade
+Tecnologias existentes
+
+A atualização de informações e tendências passou a ser requisito essencial para se manter competitivo.
+
+O benefício de fomentar a interação, respondendo dúvidas e comentários, é a obtenção de uma maior conhecimento do público.
+
+Para atender à demanda online, muitas ferramentas já foram desenvolvidas e facilitam as operações. O uso dessas tecnologias é uma forma de gerar valor para o cliente, poupando custos.
+
+Diante da quantidade de opções na concorrência acaba influenciando a fidelidade dos clientes.
+
+O marketing trabalha de maneira incessante para tornar a marca relevante a ponto de ser buscada e encontrada, culminando na fidelização do cliente.
+
+**Classificação e Modelos dos Negócios Digitais**
+
+E-commerce, trabalha diretamente com as vendas no ambiente virtual.
+
+E-business, está além de compra e venda de produtos online. Ele engloba o relacionamento com clientes, contratantes, fornecedores, designers e outros parceiros, além de infraestrutura de serviço.
+
+**Modalidades de Relacionamento nos Negócios Digitais**
+
+Uma das formas de classificar os negócios eletrônicos é por meio das modalidades de
+relacionamentos entre os agentes participantes
+
+- B2C (EMPRESA PARA CLIENTE): Acontece quando o consumidor se torna cliente de uma empresa após ter comprado pela primeira vez o seu produto ou adquirido o seu serviço. O canal de comunicação usado pode ser uma loja virtual.
+- C2B (CONSUMIDOR PARA EMPRESA): Proporciona a troca de bens de pessoa física para pessoa jurídica. Esse tipo inovador de e commerce geralmente é baseado no crowdsourcing, permitindo que um grande número de pessoas disponibilizem seus produtos e serviços para empresas.
+- B2B (EMPRESA PARA EMPRESA): Esta modalidade se refere à comunicação entre duas empresas, que podem ser parceiras ou cliente e fornecedora. Um exemplo é quando uma empresa compra produtos do seu fornecedor através da internet.
+- C2C (CONSUMIDOR PARA CONSUMIDOR): Embora descreva uma
+operação direta entre dois consumidores finais, o C2C depende de um
+terceiro elemento para que o negócio aconteça.
+
+**Modalidades de Relacionamento nos Negócios Digitais**
+
+- B2E (EMPRESA PARA EMPREGADO): Essa forma de negócio eletrônico consiste nos canais de
+comunicação existentes entre a empresa e seus colaboradores. A intranet é um bom exemplo de meio virtual muito usado dentro de corporações. Alguns exemplos são e-mail colaborativo, site e newsletter.
+- E2B (EMPREGADO PARA EMPRESA): Nessa modalidade ocorre o inverso da modalidade anterior. Ou seja, é o colaborador que entra em contato com a empresa, o que mais uma vez pode ser feito pela intranet. Além disso, a empresa pode criar outras formas de promover essa comunicação.
+- G2B (GOVERNO PARA EMPRESA): Consiste na relação entre governo e empresa, quando o primeiro oferece um serviço, por exemplo, as emissões de guias e certidões que acontecem por meio de uma plataforma virtual.
+- B2G (EMPRESAS PARA O GOVERNO): A empresa que entra em contato com o governo. Um exemplo são os sites das prefeituras em que é possível participar de uma licitação.
+
+**Modalidades de Relacionamento nos Negócios Digitais**
+
+- G2G (GOVERNO PARA GOVERNO): É o e-business que ocorre entre os diferentes órgãos
+do governo, nas suas diversas esferas. Um exemplo são as plataformas que os governos
+estaduais acessam para verificar a liberação de verbas do governo federal.
+- G2C (GOVERNO PARA O CIDADÃO): O governo também pode se valer dos negócios
+eletrônicos para se comunicar com os cidadãos, como ocorre nessa modalidade. Um
+exemplo é o serviço de emissão de certidões negativas para os cidadãos.
+- C2G (CIDADÃO PARA O GOVERNO): Aqui é o cidadão que entra em contato com o
+governo, como no caso em que responde a uma pesquisa de opinião promovida pelo
+governo para saber a opinião da população sobre determinado tema.
+
+**Tecnologia e Sistemas de Apoio ao e-business**
+
+- ERP (Enterprise Resource Planning ou Sistema Integrado de Gestão Empresarial) —
+ferramenta que integra e gerencia todas as atividades diárias da empresa;
+- SAC (Serviço de Atendimento ao Cliente) — meio utilizado para estabelecer contato
+com o cliente, tirando dúvidas e recebendo sugestões e reclamações;
+- CRM (Customer Relationship Management ou Gestão de Relacionamento com o
+Cliente) — é um conjunto de práticas e tecnologias com foco no cliente, para
+gerenciar todas as interações e usar as informações estrategicamente para
+aumentar as vendas;
+- BI (Business intelligence ou Inteligência de Negócios) — softwares capazes de
+processar dados de outros sistemas. A partir deles, são mapeados cenários
+e fornecidas previsões de resultados como suporte ao planejamento corporativo;
+- SCM (Supply Chain Managment ou Gestão da Cadeia de Suprimentos) — sistema
+que possibilita o gerenciamento dos processos de logística;
+- E-procurement Normalmente descreve as compras business-to-business realizadas
+online ou por meio de alguma rede ou plataforma digital.
+
+# Frustração Digital
+
+A “frustração digital” ocorre quando o cliente fica insatisfeito com o serviço prestado pelo empreendimento virtual. Prejuízo financeiro e de reputação das marcas
+
+Testes de carga/desempenho são indicados para qualquer tipo de produto digital. Mas se você tem um produto com um alto volume de acessos, acaba correndo ainda mais riscos, pois o número de pessoas que podem ser impactadas em caso de falha, aumenta. Se a sua área de marketing também investiu pesado em mídia, o risco aumenta ainda mais.
+
+A frustração zero é praticamente impossível. A concorrência está sempre aprimorando seus serviços, então é natural que experiências melhores estejam sendo criadas o tempo todo.
+
+Se você acha que consumidor digital é somente quem compra pela internet, está enganado. Mais que isso, consumidor digital também pode ser uma pessoa que procura informações disponíveis na rede antes mesmo de fechar negócio, utilizando os meios de comunicação online para interagir com as empresas, marcas e serviços de seu interesse.
+
+**Evolução do Consumidor**
+
+- Consumidor 1.0 : Esse tipo de cliente ficou no século passado. É quando havia a interação um para um, ou seja, quando o cliente comprava apenas o que era comercializado por quem produziu o bem. Nessa época, cada pessoa tinha o "seu" padeiro, sapateiro e assim por diante. Além disso, não havia o entendimento sobre o valor agregado de um produto e, por isso, era algo que não impactava as relações de consumo.
+- Consumidor 2.0 : Com o passar do tempo, tivemos o desenvolvimento do comércio, aumentando a concorrência entre as empresas. Além disso, os meios de comunicação de massa eram os principais responsáveis pela divulgação das ações de marketing, as quais eram feitas de um para muitos.
+- Consumidor 3.0 : O principal ponto de intersecção é a busca por pertencimento. O cliente passou a exigir das marcas uma maior aproximação. Consequentemente, a comunicação das marcas passou a ter esse foco, e as campanhas revelavam muito mais posicionamento e personalidade do que ações com o objetivo único e exclusivo de venda.
+- Consumidor 4.0 : A característica mais marcante do comportamento do consumidor 4.0 é o acesso às informações, pois o aparecimento desse perfil acontece de modo simultâneo e até pode ser considerado consequência do surgimento da internet. De maneira prática, o comprador passou a ser mais ativo e ir em busca de informações sobre o produto e a empresa em redes sociais e blogs. Dessa forma, ele passa a ter um pouco mais de controle sob a relação de compra.
+- Consumidor 5.0 : É aquele que usa das tecnologias não só para pesquisar sobre soluções e produtos que deseja, como também para realizar as compras de modo virtual. A maioria desse grupo são nativos digitais. Valor agregado, boas experiências e comunicação personalizada são fatores extremamente importantes e decisivos para o fechamento de um negócio pelo consumidor 5.0.
+
+Surge importância de entender o comportamento do consumidor online! A sua empresa precisa estar sempre um passo à frente quando se trata de hábitos de consumo e comportamento do consumidor na era digital, só assim você conseguirá se antecipar e prever o que o seu cliente procura e precisa e como a sua marca pode ajudá-lo
+
+**Tipos de Consumidor**
+
+- Consumidor tradicional: é aquele que não gosta de comprar na internet, prefere ir até a loja física, tatear o produto e analisar presencialmente.
+- Consumidor digital ou cibernético: o consumidor online que compra e gosta de adquirir seus produtos e serviços através da internet.
+- Consumidor híbrido: aquele que compra tanto online, quanto presencialmente. Esse é o mais comum, pois a maioria dos consumidores offline já aderiram a era digital também para fazer suas compras
+
+**Características do Consumidor Digital:** Exigente, Curioso, Interativo e Independente
+
+**Fatores de Influência**: Pessoais, Psicológicos, Sociais e Culturais
+
+**Dispositivos de Coleta de Dados:** Arquivos de Log, Data mining, Cadastramento dos Clientes, Cookies, Pesonalização
+
+# Empreendedor Digital
+
+Os negócios digitais são aqueles que fazem uso da tecnologias da internet para desenvolver e comercializar padrões mais modernos de produtos e serviços.
+
+Empresas já estruturadas e estabilizadas terão, em algum momento, que desenvolver
+recursos voltados para atender uma demanda na web.
+
+Empreendedorismo digital é a iniciativa que busca implantar um negócio em que as ações sejam virtuais: além da operação comercial funcionar pela internet, o produto ou serviço também é entregue em formato digital, como cursos on-line, e-books ou shows realizados através das lives.
+
+Oportunidades de atuação: Ecommerce, Blogs, Infoprodutos, Aplicativos, Jogos, Cursos e Consultorias
+
+Características e Habilidades: Iniciativa, Dinamismo, Organização, Perseverança e Liderança
+
+**Monetização**
+
+Freemium: é um modelo de negócio em que um serviço ou produto éoferecido gratuitamente, mas para obter recursos adicionais, o usuário devepagar um valor;
+
+Publicidade: muito comum em blogs e jogos em que há espaço paraanunciantes;
+
+Comissão: os marketplaces, por exemplo, ganham dinheiro cobrandocomissão das vendas feitas pelas empresas na plataforma.
+
+Como começar?
+
+Valide a ideia, escolha o nicho de mercado, crie um plano de negócio, estude o público alvo, escolha a plataforma de venda, desenvolva uma presença online, teste e ajuste, aprenda com erros e acertos.
